@@ -47,10 +47,10 @@ tailwind.config = {
 };
 
 window.onload = function () {
-  // setTimeout(() => {
-  document.getElementById("loading").classList.add("animate-fade");
-  document.querySelector("body").classList.remove("overflow-hidden");
-  // }, 5000);
+  setTimeout(() => {
+    document.getElementById("loading").classList.add("animate-fade");
+    document.querySelector("body").classList.remove("overflow-hidden");
+  }, 5000);
 };
 
 var swiper = new Swiper(".mySwiper", {
@@ -60,6 +60,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
